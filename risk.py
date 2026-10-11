@@ -2,6 +2,8 @@ from datetime import date
 
 
 def calculate_risk(deadline, effort, priority, progress):
+    if progress == 100:
+        return "Low Risk"
     deadline_date = date.fromisoformat(deadline)
     days_left = (deadline_date - date.today()).days
 
